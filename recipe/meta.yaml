@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/deprecation-factory/deprecation_factory-{{ version }}.tar.gz
-  sha256: 9b72f08061cdf78a58a5f1dabb1b96000162f7bffaf0dd6c2f961e81d1190544
+  sha256: 2fe8a2d9d867391e8a7e792e5eaebadb5c8939cdb3083efb0a84cc9ffdee95e4
 
 build:
   number: 0
