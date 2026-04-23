@@ -6,26 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/deprecation-factory/deprecation_factory-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/deprecation-factory/deprecation_factory-{{ version }}.tar.gz
   sha256: 2fe8a2d9d867391e8a7e792e5eaebadb5c8939cdb3083efb0a84cc9ffdee95e4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   requires:
     - pytest
     - numpydoc
+    - python {{ python_min }}
   imports:
     - deprecation_factory
   commands:
